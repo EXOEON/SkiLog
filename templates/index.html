@@ -2,24 +2,33 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>SkiLog: Bear</title>
+    <title>SkiLog: Bear Valley</title>
+    <link rel="stylesheet" href="/static/main.css">
 </head>
 <body>
+    <h1>SkiLog: Bear Valley</h1>
     <table>
-        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Difficulty</th>
+            <th>Zone</th>
+            <th>Completion</th>
+        {% for trail in trails %}
             <tr>
-                <th>Property 1</th>
-                <th>Property 2</th>
+                <td>{{ trail[0] }}</td>
+                {% if trail[1] == "g" %}
+                    <td><img src="/static/green.png" alt="green circle"></td>
+                {% elif trail[1] == "b" %}
+                    <td><img src="/static/blue.png" alt="blue square"></td>
+                {% elif trail[1] == "bd" %}
+                    <td><img src="/static/black.svg" alt="black diamond"></td>
+                {% elif trail[1] == "dbd" %}
+                    <td><img src="/static/double-black.svg" alt="double black diamond"></td>
+                {% endif %}
+                <td>{{ trail[2] }}</td>
+                <td><input type="checkbox" id="myCheckbox"></td>
             </tr>
-        </thead>
-        <tbody>
-            {% for item in items %}
-                <tr>
-                    <td>{{ item.property1 }}</td>
-                    <td>{{ item.property2 }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
+        {% endfor %}
     </table>
 </body>
 </html>
