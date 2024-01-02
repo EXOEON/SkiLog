@@ -20,6 +20,11 @@ h2 {
 
 table {
     margin-left: 30px;
+    table-layout: fixed;
+}
+
+table tr {
+    height: 50px; /* Adjust the height as needed */
 }
 
 table img {
@@ -31,15 +36,50 @@ td, th {
     padding-bottom: 2px;
     padding-left: 15px;
 }
+
+th {
+    font-size: 15pt;
+    text-align: left;
+}
     
+input[type=checkbox] {
+    line-height: normal;
+    width: 25px;
+    height: 25px;
+    margin: 4px 0 0;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 1000px) {
     .grid-container {
         display: block;
     }
-}
+    
+    /* Increase font size and width */
+    .grid-container * {
+        font-size: 25pt;
+        width: 80%;
+    }
+    
+    /* Increase image size */
+    .grid-container img {
+        width: 40px;
+        height: auto;
+    }
+    input[type=checkbox] {
+        line-height: normal;
+        width: 50px;
+        height: 50px;
+        margin: 4px 0 0;
+    }
+    td, th {
+        padding-bottom: 10px;
+        padding-left: 100px;
+    }
+} 
