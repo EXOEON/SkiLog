@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SkiLog: Bear</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Property 1</th>
+                <th>Property 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+                <tr>
+                    <td>{{ item.property1 }}</td>
+                    <td>{{ item.property2 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
