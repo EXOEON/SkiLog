@@ -1,4 +1,45 @@
-img {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+h2 {
+    font-size: 25pt;
+    margin-left: 45px;
+}
+
+table {
+    margin-left: 30px;
+}
+
+table img {
     width: 20px;
     height: auto;
+}
+
+td, th {
+    padding-bottom: 2px;
+    padding-left: 15px;
+}
+    
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        display: block;
+    }
 }

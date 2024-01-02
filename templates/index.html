@@ -4,31 +4,107 @@
     <meta charset="UTF-8">
     <title>SkiLog: Bear Valley</title>
     <link rel="stylesheet" href="/static/main.css">
+    <link rel="icon" href="/static/icon.png">    
 </head>
 <body>
-    <h1>SkiLog: Bear Valley</h1>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Difficulty</th>
-            <th>Zone</th>
-            <th>Completion</th>
-        {% for trail in trails %}
-            <tr>
-                <td>{{ trail[0] }}</td>
-                {% if trail[1] == "g" %}
-                    <td><img src="/static/green.png" alt="green circle"></td>
-                {% elif trail[1] == "b" %}
-                    <td><img src="/static/blue.png" alt="blue square"></td>
-                {% elif trail[1] == "bd" %}
-                    <td><img src="/static/black.svg" alt="black diamond"></td>
-                {% elif trail[1] == "dbd" %}
-                    <td><img src="/static/double-black.svg" alt="double black diamond"></td>
-                {% endif %}
-                <td>{{ trail[2] }}</td>
-                <td><input type="checkbox" id="myCheckbox"></td>
-            </tr>
-        {% endfor %}
-    </table>
+    <img src="/static/logo.png" alt="SkiLog: Bear Valley - logo" class="logo">
+    <div class="grid-container">
+        <div>
+            <h2>Frontside</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Difficulty</th>
+                    <th>Completion</th>
+                {% for trail in fs %}
+                    <tr>
+                        <td>{{ trail[0] }}</td>
+                        {% if trail[1] == "g" %}
+                            <td><img src="/static/green.png" alt="green circle"></td>
+                        {% elif trail[1] == "b" %}
+                            <td><img src="/static/blue.png" alt="blue square"></td>
+                        {% elif trail[1] == "bd" %}
+                            <td><img src="/static/black.svg" alt="black diamond"></td>
+                        {% elif trail[1] == "dbd" %}
+                            <td><img src="/static/double-black.svg" alt="double black diamond"></td>
+                        {% endif %}
+                        <td><input type="checkbox" id="myCheckbox"></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div>
+            <h2>Backside</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Difficulty</th>
+                    <th>Completion</th>
+                {% for trail in bs %}
+                    <tr>
+                        <td>{{ trail[0] }}</td>
+                        {% if trail[1] == "g" %}
+                            <td><img src="/static/green.png" alt="green circle"></td>
+                        {% elif trail[1] == "b" %}
+                            <td><img src="/static/blue.png" alt="blue square"></td>
+                        {% elif trail[1] == "bd" %}
+                            <td><img src="/static/black.svg" alt="black diamond"></td>
+                        {% elif trail[1] == "dbd" %}
+                            <td><img src="/static/double-black.svg" alt="double black diamond"></td>
+                        {% endif %}
+                        <td><input type="checkbox" id="myCheckbox"></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div>
+            <h2>Lower Mountain</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Difficulty</th>
+                    <th>Completion</th>
+                {% for trail in lm %}
+                    <tr>
+                        <td>{{ trail[0] }}</td>
+                        {% if trail[1] == "g" %}
+                            <td><img src="/static/green.png" alt="green circle"></td>
+                        {% elif trail[1] == "b" %}
+                            <td><img src="/static/blue.png" alt="blue square"></td>
+                        {% elif trail[1] == "bd" %}
+                            <td><img src="/static/black.svg" alt="black diamond"></td>
+                        {% elif trail[1] == "dbd" %}
+                            <td><img src="/static/double-black.svg" alt="double black diamond"></td>
+                        {% endif %}
+                        <td><input type="checkbox" id="myCheckbox"></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div>
+            <h2>Village Side</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Difficulty</th>
+                    <th>Completion</th>
+                {% for trail in vs %}
+                    <tr>
+                        <td>{{ trail[0] }}</td>
+                        {% if trail[1] == "g" %}
+                            <td><img src="/static/green.png" alt="green circle"></td>
+                        {% elif trail[1] == "b" %}
+                            <td><img src="/static/blue.png" alt="blue square"></td>
+                        {% elif trail[1] == "bd" %}
+                            <td><img src="/static/black.svg" alt="black diamond"></td>
+                        {% elif trail[1] == "dbd" %}
+                            <td><img src="/static/double-black.svg" alt="double black diamond"></td>
+                        {% endif %}
+                        <td><input type="checkbox" id="myCheckbox"></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
 </body>
 </html>
