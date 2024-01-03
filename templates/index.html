@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>SkiLog: Bear Valley</title>
     <link rel="stylesheet" href="/static/main.css">
-    <link rel="icon" href="/static/icon.png">    
+    <link rel="icon" href="/static/icon.png">  
 </head>
 <body>
     <img src="/static/logo.png" alt="SkiLog: Bear Valley - logo" class="logo">
@@ -28,7 +28,7 @@
                         {% elif trail[1] == "dbd" %}
                             <td><img src="/static/double-black.svg" alt="double black diamond"></td>
                         {% endif %}
-                        <td><input type="checkbox" id="myCheckbox"></td>
+                        <td><input type="checkbox" id="{{ trail[3] }}"></td>
                     </tr>
                 {% endfor %}
             </table>
@@ -52,7 +52,7 @@
                         {% elif trail[1] == "dbd" %}
                             <td><img src="/static/double-black.svg" alt="double black diamond"></td>
                         {% endif %}
-                        <td><input type="checkbox" id="myCheckbox"></td>
+                        <td><input type="checkbox" id="{{ trail[3] }}"></td>
                     </tr>
                 {% endfor %}
             </table>
@@ -76,7 +76,7 @@
                         {% elif trail[1] == "dbd" %}
                             <td><img src="/static/double-black.svg" alt="double black diamond"></td>
                         {% endif %}
-                        <td><input type="checkbox" id="myCheckbox"></td>
+                        <td><input type="checkbox" id="{{ trail[3] }}x"></td>
                     </tr>
                 {% endfor %}
             </table>
@@ -100,7 +100,7 @@
                         {% elif trail[1] == "dbd" %}
                             <td><img src="/static/double-black.svg" alt="double black diamond"></td>
                         {% endif %}
-                        <td><input type="checkbox" id="myCheckbox"></td>
+                        <td><input type="checkbox" id="{{ trail[3] }}"></td>
                     </tr>
                 {% endfor %}
             </table>
@@ -121,5 +121,51 @@
             </a>
         </div>
     </div>
+    <script>
+        // Use JavaScript to update checkboxes status on click
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('click', function() {
+                    const checkboxId = this.id;
+                    const isChecked = this.checked;
+
+                    // Send an AJAX request to the server to update checkbox status
+                    const xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/update_checkbox', true);
+                    xhr.setRequestHeader('Content-Type', 'application/json');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            console.log(xhr.responseText);
+                        }
+                    };
+                    xhr.send(JSON.stringify({ id: checkboxId, checked: isChecked }));
+                });
+            });
+
+            // Fetch initial checkbox statuses from the server
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', '/get_checkbox_states', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const checkboxStates = JSON.parse(xhr.responseText);
+
+                    checkboxes.forEach(checkbox => {
+                        const checkboxId = checkbox.id;
+                        if (checkboxStates[checkboxId]) {
+                            checkbox.checked = true;
+                        }
+                    });
+                }
+            };
+            xhr.send();
+        });
+    </script>
+    <footer>
+       <p>*denotes an unamed run <br/>**denotes and unmarked and out of boundary run 
+        <br/>This is an unofficial tool and is for personal use only. 
+        <br/> © 2024 Max Liebermann. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>

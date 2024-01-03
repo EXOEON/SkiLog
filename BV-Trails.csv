@@ -1,56 +1,60 @@
-Goldilocks,b,bs
-Burgess Bridge,b,bs
-Pipeline,b,bs
-Bear Boogie,b,bs
-West World,b,bs
-Big John,b,bs
-Shady Grove,b,bs
-Grouse Connection,b,bs
-Satisfaction,b,bs
-Pacesetter,b,bs
-Corral Ridge,bd,bs
-Blue Jay Way,bd,bs
-Oopla,bd,bs
-Spy Glass,bd,bs
-Tigger’s,bd,bs
-Kohoutek Gulley,bd,bs
-Rodeo,g,fs
-Cub Meadow,g,fs
-Ego Alley,g,fs
-Lodge Run,g,fs
-Mokelumne West,b,fs
-Tuck’s Traverse,b,fs
-Spring Gap,b,fs
-Bono’s Alley,b,fs
-Upper Mokelumne,b,fs
-Hog Back,b,fs
-Lonely Pine,b,fs
-NASTAR,b,fs
-Sugar,b,fs
-Water Tank,b,fs
-Feather Duster,bd,fs
-Lower Mokelumne,bd,fs
-Kyle’s,bd,fs
-Yellow Submarine,bd,fs
-Monte Wolfe,bd,fs
-National,bd,fs
-Groovey Gulley,bd,fs
-Australia Street,bd,fs
-Cliff Run,bd,fs
-Porridge Bowl,bd,fs
-Cornice,bd,fs
-Hank’s,bd,fs
-Grizzly Gate,bd,lm
-Anticipation Gate,bd,lm
-Freefall Gate,bd,lm
-Snow Valley,bd,lm
-Bad Boy Gate,bd,lm
-West Ridge,dbd,lm
-Cece's,dbd,lm
-Tortilla Cliffs,dbd,lm
-Gunmount Gate,dbd,lm
-Hari Kari,dbd,lm
-Greg’s Way,g,vs
-Lunch Run,b,vs
-East Bowl,b,vs
-Home Run,bd,vs
+Goldilocks,b,bs,1
+Burgess Bridge,b,bs,2
+Pipeline,b,bs,3
+Bear Boogie,b,bs,4
+West World,b,bs,5
+Big John,b,bs,6
+Shady Grove,b,bs,7
+Grouse Connection,b,bs,8
+Satisfaction,b,bs,9
+Pacesetter,b,bs,10
+Corral Ridge,bd,bs,11
+Blue Jay Way,bd,bs,12
+Oopla,bd,bs,13
+Spy Glass,bd,bs,14
+Tigger’s,bd,bs,15
+Kohoutek Gulley,bd,bs,16
+Rodeo,g,fs,17
+Cub Meadow,g,fs,18
+Ego Alley,g,fs,19
+Lodge Run,g,fs,20
+Mokelumne West,b,fs,21
+Tuck’s Traverse,b,fs,22
+Spring Gap,b,fs,23
+Bono’s Alley,b,fs,24
+Upper Mokelumne,b,fs,25
+Hog Back,b,fs,26
+Lonely Pine,b,fs,27
+NASTAR,b,fs,28
+Sugar,b,fs,29
+Water Tank,b,fs,30
+Feather Duster,bd,fs,31
+Lower Mokelumne,bd,fs,32
+Kyle’s,bd,fs,33
+Yellow Submarine,bd,fs,34
+Monte Wolfe,bd,fs,35
+National,bd,fs,36
+Groovey Gulley,bd,fs,37
+Australia Street,bd,fs,38
+Cliff Run,bd,fs,39
+Porridge Bowl,bd,fs,40
+Cornice,bd,fs,41
+Hank’s,bd,fs,42
+Grizzly Gate,bd,lm,43
+Anticipation Gate,bd,lm,44
+Freefall Gate,bd,lm,45
+Snow Valley,bd,lm,46
+Bad Boy Gate,bd,lm,47
+West Ridge,dbd,lm,48
+Cece's,dbd,lm,49
+Tortilla Cliffs,dbd,lm,50
+Gunmount Gate,dbd,lm,51
+Hari Kari,dbd,lm,52
+Greg’s Way,g,vs,53
+Lunch Run,b,vs,54
+East Bowl,b,vs,55
+Home Run,bd,vs,56
+The Face (Lift Line),bd,fs,57
+Chairline*,bd,bs,58
+Candyland**,bd,bs,59
+R&R*,bd,fs,60

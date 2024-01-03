@@ -1,5 +1,9 @@
 import csv
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, jsonify
+
+from flask_sqlalchemy import SQLAlchemy
+
+from sqlalchemy.sql import func
 
 csv_file = 'BV-Trails.csv'
 
@@ -25,6 +29,20 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('index.html', fs=fs, bs=bs, lm=lm, vs=vs)
+
+checkbox_states = {}
+
+@app.route('/update_checkbox', methods=['POST'])
+def update_checkbox():
+    data = request.get_json()
+    checkbox_id = data.get('id')
+    checked = data.get('checked')
+    checkbox_states[checkbox_id] = checked
+    return jsonify({'message': 'Checkbox state updated successfully'})
+
+@app.route('/get_checkbox_states', methods=['GET'])
+def get_checkbox_states():
+    return jsonify(checkbox_states)
 
 if __name__ == '__main__':
     app.run(debug=True)
