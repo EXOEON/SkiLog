@@ -1,18 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-body {
-    background: linear-gradient(to right, #FFA500, #FF8C00);
-    background-repeat: no-repeat;
-    background-size: cover; 
-    height: 220px;
-    margin: 0;
-    padding: 0;
-}
 
 * {
     font-family: 'Noto Sans', sans-serif;
 }
 
+.center-bt {
+    text-align: center;
+    margin-left: -7px;
+}
+
 body {
     background: linear-gradient(to right, #FFA500, #FF8C00);
     background-repeat: no-repeat;
@@ -21,12 +18,23 @@ body {
     padding: 0;
 }
 
+.full-bg {
+    
+    background: linear-gradient(to right, #FFA500, #FF8C00);
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .logo {
-    width: 300px;
+    width: 230px;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
 }
 
@@ -103,6 +111,43 @@ footer {
     padding-bottom: 30px;
 }
 
+.g-button {
+    background-color: #227736;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.g-button:hover {
+    color: rgb(0, 0, 0);
+    background-color: #8fc926;
+    transition: background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+.button {
+    background-color: #ffa503;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.button:hover {
+    background-color: #ff8c00;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
 @media (max-width: 1000px) {
     .grid-container {
         display: block;
@@ -130,3 +175,104 @@ footer {
         padding-left: 100px;
     }
 } 
+
+.acc-form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 20px;
+}
+
+.acc-form input {
+    align-items: center;
+}
+.acc-form label {
+    text-align: left;
+}
+
+.acc-form-tbox {
+    height:35px; 
+    font-size: 17pt;
+    margin-top: 10px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.dropdown-button {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.center-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.about-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.about-grid-item {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.about-text-box {
+    background-color: #227736;
+    padding: 20px;
+    font-size: 14pt;
+    color: white;
+}
+
+.about-image-box {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.about-grid-item:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
